@@ -1,0 +1,26 @@
+경로 =  PATH 환경변수 => echo %PATH%
+
+python DL -> install  => add to PATH option 체크
+Install 경로 C:\Python\python311\
+
+검색창에 sysdm.cpl, 실행
+=> 고급 => 환경변수 => 사용자 환경변수 => PATH
+C:\Python\python311\이 추가 확인
+
+cd \projects
+c:\projects\> code .
+
+현재 위치 중요!
+python -m venv [환경이름]
+현재 위치\[환경이름]
+현재 위치\[환경이름]\scripts\activate
+(환경이름) 현재 위치\[환경이름]>deactivate
+
+환경 라이브러리 리스트 작성
+pip freeze > requirements.txt
+
+새환경 작성후 (가상환경에서 나온후)
+새 환경 activate
+pip install -r requirements.txt
+
+
