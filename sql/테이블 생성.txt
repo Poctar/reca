@@ -1,0 +1,4 @@
+테이블 만들 때 <table class="table table-bordered"> 이 코드를 쓰게 되면 
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+를 써야 생성이 된다 

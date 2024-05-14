@@ -1,0 +1,23 @@
+Switch>enable
+Switch#configure terminal
+Switch(config)#ip dhcp excluded-address 192.168.1.1 192.168.1.10  # 이 주소는 할당 불가능( 예약)
+Switch(config)#ip dhcp pool test
+Switch(dhcp-config)#network 192.168.1.0 255.255.255.0
+Switch(dhcp-config)#default-router 192.168.1.1
+Switch(dhcp-config)#dns-server 8.8.8.8
+Switch(dhcp-config)#exit
+Switch(config)#interface vlan 4
+Switch(config-if)#ip address 192.168.1.11  255.255.255.0
+Switch(config-if)#no shutdown
+Switch(config-if)#exit
+Switch(config)#exit
+Switch#copy running-config startup-config
+
+Switch#show ip dhcp binding
+
+
+
+
+
+
+

@@ -1,0 +1,15 @@
+Router>enable
+Router#configure terminal
+Router(config)#interface GigabitEthernet 0/0/0 (각 방에서 나가기 전에 경로)
+Router(config-if)#ip nat inside(방 안쪽에서 보낼 준비 완료)
+Router(config-if)#exit
+Router(config)#interface GigabitEthernet 0/0/1(방 바깥쪽에서 나갈 아이피 경로 지정)
+Router(config-if)#ip nat outside
+Router(config-if)#exit
+Router(config)#
+
+Router(config)#access-list 1 permit 192.168.10.0 0.0.0.255
+Router(config)#access-list 1 deny any
+Router(config)#ip nat pool pool12 12.0.0.2 12.0.0.2 netmask 255.0.0.0
+
+Router(config)#ip nat inside source list 1 pool pool12 overload
